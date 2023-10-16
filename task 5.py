@@ -4,11 +4,11 @@ class Person:
         self.surname = surname
         self.age = age
 
-class PersonMixin:
+class Person2:
     def __str__(self):
         return f"Name: {self.name}, Surname: {self.surname}, Age: {self.age}"
 
-class Student(Person, PersonMixin):
+class Student(Person, Person2):
     def __init__(self, name: str, surname: str, age: int, university: str):
         super().__init__(name, surname, age)
         self.university = university
